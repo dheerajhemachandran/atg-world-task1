@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.fontAwesome {
+    font-family: 'Helvetica', FontAwesome, sans-serif;  
   }
+.header{
+    background-image: url("./components/utils/Rectangle.png");
+    background-size: cover;
+    min-height: 40vh;
+    position: relative;
+    z-index: -1;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.2);
+}  
+
+.title{
+  font-size: 2rem;
+  padding-bottom: 35px;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar-toggler{
+  background-color: black;
 }
 
-.App-link {
-  color: #61dafb;
+.color-overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+  padding-bottom: 40px;
+  background-color: rgba(0,0,0,.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.posts{
+  padding:10px 20px;
+}
+
+@media (min-width:992px) {
+  .header{
+    min-height:  100vh;
+    margin: -325px 0px;
+
   }
-  to {
-    transform: rotate(360deg);
+  .posts{
+
+    margin: 360px 200px;
   }
+
+  
+
+  .block {
+    display: block;
+    width: 100%;
+    border-color: black;
+    text-shadow: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .title{
+    font-size: 4rem;
+
+  }
+  .color-overlay{
+    padding-left: 200px;
+    padding-bottom: 180px;
+  }
+  
 }

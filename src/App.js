@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import Header from './components/Header';
+import Toolbar from './components/Toolbar';
+import Posts from './components/Posts';
 
 function App() {
+  const [log, setlog] = useState(false)
+  const [grouped, setgrouped] = useState(false)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Toolbar log={log} setlog={setlog}/>
+      <Header grouped={grouped} setgrouped={setgrouped} />
+      <Posts grouped={grouped} setgrouped={setgrouped} />
     </div>
   );
 }
